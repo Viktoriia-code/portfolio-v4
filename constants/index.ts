@@ -93,7 +93,7 @@ export const Socials = [
   },
   {
     name: "Email",
-    src: "/email.png",
+    src: "/email_white.png",
     link: "mailto:beloborodova.viktoriia@gmail.com",
   },
 ];
@@ -251,6 +251,63 @@ export const Other_skill = [
     Image: "/go.png",
     width: 60,
     height: 60,
+  },
+];
+
+export const Timeline = [
+  {
+    date: "4/2024 - present",
+    name: "Frontend engineer",
+    place_name: "Mindioo",
+    location: "Munich, Germany (remotely)",
+    image_src: "/mindioo_logo.png",
+    width: 129.2,
+    height: 29.37,
+  },
+  {
+    date: "2024 - present",
+    name: "Bachelor's Degree at Information and Communication Technology",
+    place_name: "Metropolia UAS",
+    location: "Helsinki, Finland",
+    image_src: "/metropolia_logo.svg",
+    width: 129.2,
+    height: 29.37,
+  },
+  {
+    date: "5/2023 - 10/2023",
+    name: "Frontend Developer",
+    place_name: "TUTORS Finland Oy",
+    location: "Espoo, Finland",
+    image_src: "/tutors_logo.jpg",
+    width: 129.2,
+    height: 29.37,
+  },
+  {
+    date: "2022 - 2023",
+    name: "Vocational Degree at Information and Communication Technology",
+    place_name: "KEUDA",
+    location: "Kerava, Finland",
+    image_src: "/keuda-logo.jpg",
+    width: 129.2,
+    height: 29.37,
+  },
+  {
+    date: "9/2017 - 10/2019",
+    name: "EDI specialist",
+    place_name: "KORUS Consulting CIS",
+    location: "St.Petersburg, Russia",
+    image_src: "/korus_logo.png",
+    width: 70,
+    height: 29.37,
+  },
+  {
+    date: "2011 - 2015",
+    name: "Bachelor's Degree at Management",
+    place_name: "Ural State Mining University",
+    location: "Yekaterinburg, Russia",
+    image_src: "/ursmu_logo.png",
+    width: 70,
+    height: 29.37,
   },
 ];
 

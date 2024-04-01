@@ -3,9 +3,9 @@ import HeroContent from '../sub/HeroContent'
 
 const Hero = () => {
   return (
-    <div>
+    <section id='home'>
       <HeroContent />
-    </div>
+    </section>
   )
 }
 

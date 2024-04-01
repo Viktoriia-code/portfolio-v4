@@ -15,7 +15,7 @@ const HeroContent = () => {
     >
       <div className='h-full w-full flex flex-col gap-5 justify-center m-auto text-start'>
         <motion.div
-        variants={slideInFromTop}
+        variants={slideInFromTop(0)}
         className='Welcome-box py-[10px] px-[13px] border border-[#7042f88b] opacity-[0.9]'
         >
           <MapPinIcon className='text-[#b49bff] mr-[10px] h-5 w-5'/>
@@ -26,7 +26,7 @@ const HeroContent = () => {
         className='flex flex-col gap-6 mt-6 text-6xl font-bold text-white max-w-[600px] w-auto h-auto'
         >
           <span>
-            Hi! This is
+            Hi! It&apos;s
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
               {" "}
               Viktoriia{" "}
