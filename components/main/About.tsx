@@ -1,11 +1,11 @@
 "use client"
 
-import React, { useEffect } from 'react'
+import React, { createRef, useEffect, useRef } from 'react'
 import { useAnimation, motion } from 'framer-motion'
-import { useInView } from "react-intersection-observer";
+import { useInView } from "react-intersection-observer"
 import { slideInFromLeft, slideInFromRight, slideInFromTop, slideInFromBottom } from '@/utils/motion'
 import Image from 'next/image'
-import { Timeline } from "@/constants";
+import { Timeline } from "@/constants"
 import { MapPinIcon } from '@heroicons/react/24/outline'
 
 
@@ -49,11 +49,11 @@ const About = () => {
           variants={slideInFromLeft(0.8)}
           className="text-lg text-gray-400 my-5 max-w-[800px]"
         >
-          I&apos;m a sertified customer-oriented specialist with 3+ years of hands-on experience on multitasking position at a big IT company that provides a vast variety of EDI solutions geared on B2B sector. 
+          Enthusiastic sertified customer-oriented specialist with 3+ years of hands-on experience on multitasking position at a big IT company that provides a vast variety of EDI solutions geared on B2B sector. 
           I complited a vocational degree in software development. Currently a Software Development student at KEUDA (Finland), looking for an internship.
         </motion.p>
       </div>
-      <motion.div 
+      <motion.div
         ref={ref}
         animate={controls}
         initial="hidden"
