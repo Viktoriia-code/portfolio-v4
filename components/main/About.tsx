@@ -61,7 +61,7 @@ const About = () => {
           variants={slideInFromRight(0.8)}
           className="text-basicText my-5 max-w-[800px]"
         >
-          I’m continuing the profession I began in vocational school, and now I'm studying for my bachelor's degree in Information Technology at Metropolia AMK in Espoo. We're learning Python programming, databases, and React for frontend development.
+          I&apos;m continuing the profession I began in vocational school, and now I&apos;m studying for my bachelor&apos;s degree in Information Technology at Metropolia AMK in Espoo. We're learning Python programming, databases, and React for frontend development.
         </motion.p>
       </div>
     </section>
