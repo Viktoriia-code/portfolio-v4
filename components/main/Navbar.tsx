@@ -1,46 +1,36 @@
-import { Socials } from "@/constants";
-import Image from "next/image";
 import React from "react";
 
 const Navbar = () => {
+  const nav_ind = 'nav-indicator mr-4 h-[1px] w-8 bg-gray-400 transition-all group-hover:w-12 group-hover:bg-slate-100 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none';
+  const nav_text = 'nav-text text-sm font-medium uppercase tracking-widest text-gray-400 group-hover:text-slate-100 group-focus-visible:text-slate-200';
   return (
-    <div className="w-full h-[65px] fixed top-0 shadow-lg z-50 px-10">
-      <div className="w-full h-full flex flex-row items-center justify-end m-auto px-[10px]">
-
-        <div className="absolute left-1/2 transform -translate-x-1/2 w-[500px] h-full flex flex-row items-center justify-between md:mr-20">
-          
-          <div className="flex items-center justify-between w-full h-auto bg-[#0300145e] mr-[15px] px-[20px] py-[10px] rounded-full text-gray-200">
-            <a href="#home" className="cursor-pointer">
-              Home
-            </a>
-            <a href="#about" className="cursor-pointer">
-              About me
-            </a>
-            <a href="#skills" className="cursor-pointer">
-              Skills
-            </a>
-            <a href="#projects" className="cursor-pointer">
-              Projects
-            </a>
-            <a href="#contacts" className="cursor-pointer">
-              Contacts
-            </a>
-          </div>
-        </div>
-
-        <div className="flex flex-row gap-5">
-          {Socials.map((social) => (
-            <a href={social.link} key={social.name} target="_blank" rel="noreferrer">
-              <Image
-                src={social.src}
-                alt={social.name}
-                width={24}
-                height={24}
-              />
-            </a>
-          ))}
-        </div>
-      </div>
+    <div className="nav hidden lg:block">
+      <ul className="w-max flex flex-col gap-3">
+        <li>
+          <a href="#about" className="cursor-pointer group flex items-center active">
+            <span className={nav_ind}></span>
+            <span className={nav_text}>About</span>
+          </a>
+        </li>
+        <li>
+          <a href="#experience" className="cursor-pointer group flex items-center active">
+            <span className={nav_ind}></span>
+            <span className={nav_text}>Experience</span>
+          </a>
+        </li>
+        <li>
+          <a href="#education" className="cursor-pointer group flex items-center active">
+            <span className={nav_ind}></span>
+            <span className={nav_text}>Education</span>
+          </a>
+        </li>
+        <li>
+          <a href="#projects" className="cursor-pointer group flex items-center active">
+            <span className={nav_ind}></span>
+            <span className={nav_text}>Projects</span>
+          </a>
+        </li>
+      </ul>
     </div>
   );
 };
