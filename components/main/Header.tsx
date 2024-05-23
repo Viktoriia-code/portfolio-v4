@@ -27,7 +27,7 @@ const Header = () => {
         className='flex flex-col gap-1 mt-6 text-6xl font-bold text-white max-w-[600px] w-auto h-auto'
         >
           <a href="/" className='z-[100]'>
-            <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 text-4xl font-bold sm:text-5xl">Viktoriia<br />Beloborodova</h1>
+            <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 text-5xl font-bold sm:text-5xl">Viktoriia<br />Beloborodova</h1>
             <h2 className='mt-3 text-3xl font-medium tracking-tight texthe-heading sm:text-3xl'>Software Developer</h2>
           </a>
         </motion.div>
