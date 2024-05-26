@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useRef, Suspense } from "react";
+import React, { useState, useRef, Suspense, useEffect } from "react";
 import { Points, PointMaterial } from "@react-three/drei";
 import { Canvas, type PointsProps, useFrame } from "@react-three/fiber";
 import * as random from "maath/random";
@@ -45,8 +45,16 @@ export const StarBackground = (props: PointsProps) => {
 const StarsCanvas = () => {
   const [isVisible, setIsVisible] = useState(false);
 
+  useEffect(() => {
+    const storedValue = localStorage.getItem("starsBg");
+    const value = storedValue ? JSON.parse(storedValue) : false;
+    setIsVisible(value);
+  }, [])
+
   const toggleVisibility = () => {
-    setIsVisible(!isVisible);
+    const newValue = !isVisible;
+    setIsVisible(newValue);
+    localStorage.setItem("starsBg", JSON.stringify(newValue));
   };
 
   return (
