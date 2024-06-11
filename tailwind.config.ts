@@ -17,7 +17,8 @@ const config: Config = {
       colors: {
         "accent": colors.cyan[400],
         "basicText": colors.gray[400],
-        "heading": colors.slate[200],
+        "lightBasicText": colors.gray[300],
+        "heading": colors.slate[100],
         "lightBg": 'rgba(35, 53, 84, 0.5)',
         "mainBg": '#030014',
       },

@@ -209,6 +209,9 @@ export const Education_data = [
     link: "https://www.metropolia.fi/en/academics/degree-programmes-in-finnish/information-and-communication-technology",
     width: 129.2,
     height: 29.37,
+    job_tasks: [
+      "Major: Software Engineering",
+    ],
     tech_stack: [ "Python", "GitHub", "Databases (SQL)", "JavaScript", "OOP"]
   },
   {

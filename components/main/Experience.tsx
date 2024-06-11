@@ -52,7 +52,7 @@ const Experience = () => {
               key={place.place_name}
               onClick={() => handlePlaceClick(place)}
               className={`flex items-center h-11 w-full whitespace-nowrap border-l-[3px] 
-              px-3 pb-1 text-sm transition-all hover:bg-lightBg hover:text-accent
+              px-3 pb-1 transition-all hover:bg-lightBg hover:text-accent
               cursor-pointer
               ${selectedPlace.place_name === place.place_name ? 'bg-lightBg text-accent border-l-accent' : 'bg-transparent text-basicText border-l-basicText'}`}
             >
@@ -83,7 +83,7 @@ const Experience = () => {
               {selectedPlace.job_tasks.map((task, index) => (
                 <div key={index} className='flex gap-4 text-sm'>
                   <span className='text-accent w-2'>▹</span>
-                  <p className="text-basicText">{task}</p>
+                  <p className="sub-text">{task}</p>
                 </div>
               ))}
             </div>

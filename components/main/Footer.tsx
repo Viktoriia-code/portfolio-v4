@@ -21,7 +21,7 @@ const Footer = () => {
       animate={controls}
       initial="hidden"
       variants={slideInFromRight(0.3)}
-      className='text-basicText text-center text-sm'
+      className='basic-text text-center text-sm'
     >
       <p className="mb-1">
         Built with Next.js, TypeScript and Tailwind CSS, deployed with Vercel.

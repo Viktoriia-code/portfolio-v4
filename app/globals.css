@@ -74,6 +74,28 @@ html {
   scroll-behavior: smooth;
 }
 
+.basic-text {
+  color: #9ca3af;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+@media only screen and (max-width: 768px) {
+  .basic-text {
+    color: #cbd5e1;
+    font-size: 0.9rem;
+    line-height: 1.3rem;
+  }
+  .sub-text {
+    color: #cbd5e1;
+  }
+}
+
+.sub-text {
+  color: #9ca3af;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
 /* .place-item {
   text-decoration: none;
   text-decoration-skip-ink: auto;

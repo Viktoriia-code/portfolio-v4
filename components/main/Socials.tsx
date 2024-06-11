@@ -18,7 +18,7 @@ const Socials = () => {
         <li className="text-xs shrink-0" key={social.name}>
           <a href={social.link} key={social.name} target="_blank" rel="noreferrer" className='block hover:text-heading' aria-label={`${social.name} (opens in a new tab)`} title={social.name}>
             <span className="sr-only">{social.name}</span>
-            <FontAwesomeIcon icon={iconMapping[social.name.toLowerCase()]} aria-hidden="true" className='text-2xl text-basicText hover:text-heading transition-all' />
+            <FontAwesomeIcon icon={iconMapping[social.name.toLowerCase()]} aria-hidden="true" className='text-2xl text-heading md:text-basicText hover:text-heading transition-all' />
           </a>
         </li>
       ))}
