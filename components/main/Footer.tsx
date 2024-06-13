@@ -23,10 +23,10 @@ const Footer = () => {
       variants={slideInFromRight(0.3)}
       className='basic-text text-center text-sm'
     >
-      <p className="mb-1">
+      <p className="mb-1 sub-text">
         Built with Next.js, TypeScript and Tailwind CSS, deployed with Vercel.
       </p>
-      <span>© 2024 by Viktoriia Beloborodova</span>
+      <span className='sub-text'>© 2024 by Viktoriia Beloborodova</span>
     </motion.footer>
   )
 }
