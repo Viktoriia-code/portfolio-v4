@@ -141,7 +141,7 @@ export const Backend_skill = [
 export const Experince_data = [
   {
     date: "4/2024 - present",
-    date_title: "2024",
+    date_title: "APR — AUG 2024",
     name: "Frontend engineer",
     place_name: "Mindioo",
     location: "Munich, Germany (remotely)",
@@ -156,11 +156,11 @@ export const Experince_data = [
       "Optimizing components for maximum performance across a vast array of web-capable devices and browsers",
       "Using Tailwind CSS for styling components"
     ],
-    tech_stack: ["Next.js", "Tailwind CSS", "TypeScript"],
+    tech_stack: ["Next.js", "Tailwind CSS", "TypeScript", "GitHub"],
   },
   {
     date: "5/2023 - 10/2023",
-    date_title: "2023",
+    date_title: "MAY — OCT 2023",
     name: "Frontend Developer",
     place_name: "TUTORS Finland Oy",
     location: "Espoo, Finland",
@@ -179,7 +179,7 @@ export const Experince_data = [
   },
   {
     date: "9/2017 - 10/2019",
-    date_title: "2017-2019",
+    date_title: "2017 — 2019",
     name: "EDI specialist",
     place_name: "KORUS Consulting CIS",
     location: "St.Petersburg, Russia",

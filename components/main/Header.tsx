@@ -28,7 +28,7 @@ const Header = () => {
         >
           <a href="/" className='z-[100]'>
             <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 text-5xl font-bold sm:text-5xl">Viktoriia<br />Beloborodova</h1>
-            <h2 className='mt-3 text-3xl font-medium tracking-tight text-heading sm:text-3xl'>Software Developer</h2>
+            <h2 className='mt-3 text-2xl font-medium tracking-tight text-heading sm:text-3xl'>Software Developer</h2>
           </a>
         </motion.div>
         <motion.p

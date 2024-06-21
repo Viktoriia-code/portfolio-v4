@@ -10,6 +10,8 @@ import { MapPinIcon } from '@heroicons/react/24/outline'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 import { Place } from '../../types';
+import Card from '../ui/Card'
+import { ArrowUpRightIcon } from '@heroicons/react/20/solid'
 
 const Education = () => {
   const controls = useAnimation();
@@ -20,12 +22,6 @@ const Education = () => {
       controls.start("visible");
     }
   }, [controls, inView]);
-
-  const [selectedPlace, setSelectedPlace] = useState<Place>(Education_data[0]);
-
-  const handlePlaceClick = (place: Place) => {
-    setSelectedPlace(place);
-  };
 
   return (
     <motion.section id='education' className='z-[50] min-h-[380px] scroll-mt-16 lg:scroll-mt-28'>
@@ -43,64 +39,60 @@ const Education = () => {
         animate={controls}
         initial="hidden"
         variants={slideInFromRight(0.8)}
-        className='mt-10 lg:flex lg:gap-2'
+        className='mt-8 flex flex-col gap-6 lg:gap-12 group/list'
+        aria-label="Job tabs"
       >
 
-        <ul className='flex flex-col' aria-label="Job tabs">
-          {Education_data.map((place) => (
-            <li
-              key={place.place_name}
-              onClick={() => handlePlaceClick(place)}
-              className={`flex items-center h-11 w-full whitespace-nowrap border-l-[3px] 
-              px-3 pb-1 transition-all hover:bg-lightBg hover:text-accent
-              cursor-pointer
-              ${selectedPlace.place_name === place.place_name ? 'bg-lightBg text-accent border-l-accent' : 'bg-transparent text-basicText border-l-basicText'}`}
-            >
-              {place.date_title}
-            </li>
-          ))}
-        </ul>
-
-        <div className="w-full text-base text-white pt-2 pb-4 px-5 max-w-[550px] flex flex-col gap-2">
-          <h3 className='text-heading'>
-            {selectedPlace.name} @ {selectedPlace.place_name}
-            {selectedPlace.link && (
-              <a href={selectedPlace.link} className="ml-2 hover:text-accent transition-all" target="_blank" rel="noopener noreferrer" aria-label={`${selectedPlace.place_name} (opens in a new tab)`} title={selectedPlace.place_name}>
-                <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
-              </a>
-            )}
+      {Education_data.map((studies, index) => (
+        
+        <Card key={index}>
+          <h3 className='nav-text sm:col-span-2 mt-1 mb-2 z-10'>
+            {studies.date_title}
           </h3>
-          <span className="text-basicText font-medium mb-2 text-sm">{selectedPlace.date}</span>
-          <span className='Welcome-text text-sm whitespace-nowrap inline-flex'><MapPinIcon className='text-[#b49bff] mx-[5px] h-5 w-5'/>{selectedPlace.location}</span>
-          <Image
-            src={selectedPlace.image_src}
-            alt={selectedPlace.place_name}
-            width={selectedPlace.width}
-            height={selectedPlace.height}
-          />
-          {selectedPlace.job_tasks && (
-            <div className="flex flex-col gap-1 mt-2">
-              {selectedPlace.job_tasks.map((task, index) => (
-                <div key={index} className='flex gap-4 text-sm'>
-                  <span className='text-accent w-2'>▹</span>
-                  <p className="text-basicText">{task}</p>
-                </div>
-              ))}
-            </div>
-          )}
-          {selectedPlace.tech_stack && (
-            <div className="flex flex-wrap gap-2 mt-2">
-              {selectedPlace.tech_stack.map((skill, index) => (
-                <div
-                key={index}
-                className='Welcome-box py-1 px-[13px] border border-[#7042f88b] opacity-[0.9]'
-                >
-                  <span className='Welcome-text text-[13px]'>{skill}</span>
-                </div>
-              ))}
-            </div>
-          )}
-        </div>
+          <div className='z-10 sm:col-span-6'>
+            <h3 className='text-heading'>
+              {studies.name} @{" "}
+              {studies.link ? (
+                <a href={studies.link} className="inline-flex items-center font-medium leading-tight text-heading hover:text-accent focus-visible:text-accent group/link text-base" target="_blank" rel="noopener noreferrer" aria-label={`${studies.place_name} (opens in a new tab)`} title={`${studies.place_name} website`}>
+                  {studies.place_name}
+                  <ArrowUpRightIcon className='ml-1 h-5 w-5'/>
+                </a>
+              ): (
+                <span>{studies.place_name}</span>
+              )}
+            </h3>
+            <span className='Welcome-text text-sm whitespace-nowrap inline-flex mt-1'><MapPinIcon className='text-[#b49bff] mx-[5px] h-5 w-5'/>{studies.location}</span>
+            <Image
+              src={studies.image_src}
+              alt={studies.place_name}
+              width={studies.width}
+              height={studies.height}
+            />
+            {studies.job_tasks && (
+              <div className="flex flex-col gap-[6px] mt-1">
+                {studies.job_tasks.map((task, index) => (
+                  <div key={index} className='flex gap-2 text-sm'>
+                    <span className='w-2 text-gray-500'>▸</span>
+                    <p className="text-basicText">{task}</p>
+                  </div>
+                ))}
+              </div>
+            )}
+            {studies.tech_stack && (
+              <div className="flex flex-wrap gap-2 mt-2">
+                {studies.tech_stack.map((skill, index) => (
+                  <div
+                  key={index}
+                  className='Welcome-box py-1 px-[13px] border border-[#7042f88b] opacity-[0.9]'
+                  >
+                    <span className='Welcome-text text-[13px]'>{skill}</span>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        </Card>
+      ))}
       </motion.div>
     </motion.section>
   )

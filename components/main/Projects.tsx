@@ -35,7 +35,7 @@ const Projects = () => {
         animate={controls}
         initial="hidden"
         variants={slideInFromRight(0.8)}
-        className='mt-10 lg:flex lg:gap-2'
+        className='mt-8 lg:flex lg:gap-2'
       >
 
         <ul aria-label="Project tabs">
