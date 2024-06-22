@@ -8,6 +8,7 @@ import Image from 'next/image'
 import { Projects_data } from "@/constants"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowUpRightFromSquare, faCode } from '@fortawesome/free-solid-svg-icons'
+import Card from '../ui/Card'
 
 const Projects = () => {
   const controls = useAnimation();
@@ -20,7 +21,7 @@ const Projects = () => {
   }, [controls, inView]);
 
   return (
-    <motion.section id='projects' className='z-[50] min-h-[380px] scroll-mt-16 lg:scroll-mt-28'>
+    <section id='projects' className='z-[50] scroll-mt-16 lg:scroll-mt-28'>
       <motion.h3 
         ref={ref}
         animate={controls}
@@ -35,60 +36,54 @@ const Projects = () => {
         animate={controls}
         initial="hidden"
         variants={slideInFromRight(0.8)}
-        className='mt-8 lg:flex lg:gap-2'
+        className='mt-8 flex flex-col gap-6 lg:gap-12 group/list'
       >
 
-        <ul aria-label="Project tabs">
+
           {Projects_data.map((project) => (
-            <li
+            <Card
               key={project.name}
-              className={`flex items-center mb-12 w-full whitespace-nowrap
-              px-3 pb-1 text-sm transition-all text-basicText
-              `}
             >
-              <div className='group relative grid gap-4 pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50'>
-                <div className='absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg'></div>
-                <Image
-                  src={project.image_src}
-                  alt={project.place_name}
-                  width="200"
-                  height="48"
-                  className='rounded border-2 border-slate-200/10 transition group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1'
-                />
-                <div className='z-10 sm:order-2 sm:col-span-6'>
-                  <div className='flex gap-1'>
-                    <h3 className='text-heading'>
-                      {project.name}
-                    </h3>
-                    {project.link && (<a href={project.link} className="ml-2 hover:text-accent transition-all" target="_blank" rel="noopener noreferrer" aria-label={`${project.name} (opens in a new tab)`} title={`${project.name} deploy`}>
-                      <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
-                    </a>)}
-                    <a href={project.code_link} className="ml-2 hover:text-accent transition-all" target="_blank" rel="noopener noreferrer" aria-label={`${project.name} (opens in a new tab)`} title={`${project.name} code`}>
-                      <FontAwesomeIcon icon={faCode} />
-                    </a>
-                  </div>
-                  <p className='text-wrap'>{project.desc}</p>
-
-
-                  {project.tech_stack && (
-                    <div className="flex flex-wrap gap-2 mt-2">
-                      {project.tech_stack.map((skill, index) => (
-                        <div
-                        key={index}
-                        className='Welcome-box py-[3px] px-[13px] border border-[#7042f88b] opacity-[0.9]'
-                        >
-                          <span className='Welcome-text text-[12px]'>{skill}</span>
-                        </div>
-                      ))}
-                    </div>
-                  )}
+              <Image
+                src={project.image_src}
+                alt={project.place_name}
+                width="200"
+                height="48"
+                className='rounded border-2 border-slate-200/10 transition group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1 z-10'
+              />
+              <div className='z-10 sm:order-2 sm:col-span-6'>
+                <div className='flex gap-1'>
+                  <h3 className='text-heading'>
+                    {project.name}
+                  {project.link && (<a href={project.link} className="ml-2 hover:text-accent transition-all" target="_blank" rel="noopener noreferrer" aria-label={`${project.name} (opens in a new tab)`} title={`${project.name} deploy`}>
+                    <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+                  </a>)}
+                  <a href={project.code_link} className="ml-2 hover:text-accent transition-all" target="_blank" rel="noopener noreferrer" aria-label={`${project.name} (opens in a new tab)`} title={`${project.name} code`}>
+                    <FontAwesomeIcon icon={faCode} />
+                  </a>
+                  </h3>
                 </div>
-            </div>
-          </li>
+                <p className='sub-text'>{project.desc}</p>
+
+
+                {project.tech_stack && (
+                  <div className="flex flex-wrap gap-2 mt-2">
+                    {project.tech_stack.map((skill, index) => (
+                      <div
+                      key={index}
+                      className='Welcome-box py-[3px] px-[13px] border border-[#7042f88b] opacity-[0.9]'
+                      >
+                        <span className='Welcome-text text-[12px]'>{skill}</span>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </Card>
           ))}
-        </ul>
+
       </motion.div>
-    </motion.section>
+    </section>
   )
 }
 

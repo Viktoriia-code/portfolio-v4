@@ -7,9 +7,6 @@ import { useInView } from "react-intersection-observer"
 import Image from 'next/image'
 import { Education_data } from "@/constants"
 import { MapPinIcon } from '@heroicons/react/24/outline'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
-import { Place } from '../../types';
 import Card from '../ui/Card'
 import { ArrowUpRightIcon } from '@heroicons/react/20/solid'
 
@@ -24,7 +21,7 @@ const Education = () => {
   }, [controls, inView]);
 
   return (
-    <motion.section id='education' className='z-[50] min-h-[380px] scroll-mt-16 lg:scroll-mt-28'>
+    <section id='education' className='z-[50] scroll-mt-16 lg:scroll-mt-28'>
       <motion.h3 
         ref={ref}
         animate={controls}
@@ -53,7 +50,7 @@ const Education = () => {
             <h3 className='text-heading'>
               {studies.name} @{" "}
               {studies.link ? (
-                <a href={studies.link} className="inline-flex items-center font-medium leading-tight text-heading hover:text-accent focus-visible:text-accent group/link text-base" target="_blank" rel="noopener noreferrer" aria-label={`${studies.place_name} (opens in a new tab)`} title={`${studies.place_name} website`}>
+                <a href={studies.link} className="inline-flex items-center font-medium hover:text-accent focus-visible:text-accent group/link text-base" target="_blank" rel="noopener noreferrer" aria-label={`${studies.place_name} (opens in a new tab)`} title={`${studies.place_name} website`}>
                   {studies.place_name}
                   <ArrowUpRightIcon className='ml-1 h-5 w-5'/>
                 </a>
@@ -94,7 +91,7 @@ const Education = () => {
         </Card>
       ))}
       </motion.div>
-    </motion.section>
+    </section>
   )
 }
 

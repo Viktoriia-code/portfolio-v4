@@ -1,14 +1,24 @@
 "use client"
 
-import React from 'react';
-import { motion} from 'framer-motion';
+import React, { useEffect } from 'react';
+import { useAnimation, motion} from 'framer-motion'
 import { slideInFromLeft, slideInFromRight, slideInFromTop, slideInFromBottom } from '@/utils/motion';
 import useDeviceSize from '@/hooks/useDeviceSize';
 
+
 const About = () => {
+  /*const controls = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+
   const width = useDeviceSize();
   
-  if (width !== 0) {
+  {/*if (width !== 0) {
     if (width <= 768) {
       return (
         <section id='about' className='scroll-mt-16 lg:scroll-mt-24'>
@@ -25,7 +35,7 @@ const About = () => {
           </div>
         </section>
       )
-    } else if (width > 768) { 
+    } else if (width > 768) { */
       return (
         <motion.section 
           id='about' 
@@ -55,8 +65,8 @@ const About = () => {
           </div>
         </motion.section>
       )
-    }
-  }
+    /*}
+  }*/
 }
 
 export default About

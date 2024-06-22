@@ -1,16 +1,13 @@
 "use client"
 
 import { slideInFromLeft, slideInFromRight, slideInFromTop, slideInFromBottom } from '@/utils/motion'
-import React, { createRef, useEffect, useRef, useState } from 'react'
+import React, { useEffect } from 'react'
 import { useAnimation, motion } from 'framer-motion'
 import { useInView } from "react-intersection-observer"
 import Image from 'next/image'
 import { Experince_data } from "@/constants"
 import { MapPinIcon } from '@heroicons/react/24/outline'
 import { ArrowUpRightIcon } from '@heroicons/react/20/solid'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowRightFromBracket } from '@fortawesome/free-solid-svg-icons'
-import { Place } from '../../types';
 import Card from '../ui/Card'
 
 const Experience = () => {
@@ -23,14 +20,8 @@ const Experience = () => {
     }
   }, [controls, inView]);
 
-  {/* const [selectedPlace, setSelectedPlace] = useState<Place>(Experince_data[0]);
-
-  const handlePlaceClick = (place: Place) => {
-    setSelectedPlace(place);
-  }; */}
-
   return (
-    <motion.section id='experience' className='z-[50] min-h-[540px] scroll-mt-16 lg:scroll-mt-28'>
+    <motion.section id='experience' className='z-[50] scroll-mt-16 lg:scroll-mt-28'>
       <motion.h3 
         ref={ref}
         animate={controls}
