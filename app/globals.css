@@ -91,8 +91,9 @@ html {
   font-weight: 600;
   font-size: 0.84rem;
   line-height: 1rem;
-  color: #6b7280;
+  /*color: #6b7280;*/
 }
+
 @media only screen and (max-width: 768px) {
   .basic-text {
     color: #cbd5e1;

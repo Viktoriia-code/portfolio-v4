@@ -1,49 +1,32 @@
 "use client"
 
-import { slideInFromLeft, slideInFromRight, slideInFromTop, slideInFromBottom } from '@/utils/motion'
-import React, { createRef, useEffect, useRef, useState } from 'react'
-import { useAnimation, motion } from 'framer-motion'
-import { useInView } from "react-intersection-observer"
+import React, { createRef, forwardRef, useEffect, useRef, useState } from 'react'
+
 import Image from 'next/image'
 import { Education_data } from "@/constants"
 import { MapPinIcon } from '@heroicons/react/24/outline'
 import Card from '../ui/Card'
 import { ArrowUpRightIcon } from '@heroicons/react/20/solid'
+import Skills from './Skills'
 
-const Education = () => {
-  const controls = useAnimation();
-  const [ref, inView] = useInView();
-
-  useEffect(() => {
-    if (inView) {
-      controls.start("visible");
-    }
-  }, [controls, inView]);
+const Education = forwardRef<HTMLDivElement, { id: string }>((props, ref) => {
 
   return (
-    <section id='education' className='z-[50] scroll-mt-16 lg:scroll-mt-28'>
-      <motion.h3 
-        ref={ref}
-        animate={controls}
-        initial="hidden"
-        variants={slideInFromRight(0.5)}
-        className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500"
-      >
+    <section 
+      ref={ref} 
+      id={props.id} 
+      className='z-[50] scroll-mt-16 lg:scroll-mt-24'
+    >
+      <h3 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
         Education
-      </motion.h3>
-      <motion.div
-        ref={ref}
-        animate={controls}
-        initial="hidden"
-        variants={slideInFromRight(0.8)}
+      </h3>
+      <div
         className='mt-8 flex flex-col gap-6 lg:gap-12 group/list'
         aria-label="Job tabs"
       >
-
       {Education_data.map((studies, index) => (
-        
         <Card key={index}>
-          <h3 className='nav-text sm:col-span-2 mt-1 mb-2 z-10'>
+          <h3 className='nav-text text-navText sm:col-span-2 mt-1 mb-2 z-10'>
             {studies.date_title}
           </h3>
           <div className='z-10 sm:col-span-6'>
@@ -54,7 +37,7 @@ const Education = () => {
                   {studies.place_name}
                   <ArrowUpRightIcon className='ml-1 h-5 w-5'/>
                 </a>
-              ): (
+              ) : (
                 <span>{studies.place_name}</span>
               )}
             </h3>
@@ -90,9 +73,12 @@ const Education = () => {
           </div>
         </Card>
       ))}
-      </motion.div>
+      </div>
+      <Skills />
     </section>
   )
-}
+})
+
+Education.displayName = 'Education';
 
 export default Education

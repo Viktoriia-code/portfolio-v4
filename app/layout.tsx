@@ -10,7 +10,7 @@ import StarsCanvas from "@/components/main/StarsBg";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Viktoriia Portfolio",
+  title: "Viktoriia Beloborodova",
   description: "Sotfware Engineer",
 };
 

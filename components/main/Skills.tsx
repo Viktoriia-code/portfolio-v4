@@ -8,9 +8,9 @@ import SkillText from "../sub/SkillText";
 
 const Skills = () => {
   return (
-    <section
+    <div
       id="skills"
-      className="flex flex-col items-center justify-center gap-3 relative overflow-hidden"
+      className="flex flex-col items-center justify-center gap-3 relative overflow-hidden mt-7"
       style={{ transform: "scale(0.9" }}
     >
       <SkillText />
@@ -38,7 +38,7 @@ const Skills = () => {
           />
         ))}
       </div>
-    </section>
+    </div>
   );
 };
 

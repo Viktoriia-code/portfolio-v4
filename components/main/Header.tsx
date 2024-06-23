@@ -7,7 +7,7 @@ import { MapPinIcon } from '@heroicons/react/24/outline'
 import Socials from './Socials';
 import Navbar from './Navbar'
 
-const Header = () => {
+const Header: React.FC<{ activeSection: string }> = ({ activeSection }) => {
   return (
     <motion.header
     initial='hidden'
@@ -42,7 +42,7 @@ const Header = () => {
         <motion.div
           variants={slideInFromLeft(1)}
         >
-          <Navbar />
+          <Navbar activeSection={activeSection} />
         </motion.div>
         {/* <motion.a
           variants={slideInFromLeft(1)}
