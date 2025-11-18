@@ -54,7 +54,7 @@ const About = forwardRef<HTMLDivElement, { id: string }>((props, ref) => {
               During this time, I realized I wanted to learn more about technology and pursue software development, which became my true passion.
             </p>
             <p className="my-5 max-w-[800px] basic-text">
-              I moved to Finland, learned Finnish, and in 2022, I completed <strong className="highlight-text">a vocational degree in ICT</strong> at Keuda Vocational School in Kerava, studying entirely in Finnish. I worked as a frontend developer for 1 year and got solid skills on web development using HTML, CSS, JavaScript, React and TypeScript. In my work, I aim for high-quality, reliable, and scalable solutions, and I deeply believe in the power of teamwork.
+              I moved to Finland, learned Finnish, and in 2023, I completed <strong className="highlight-text">a vocational degree in ICT</strong> at Keuda Vocational School in Kerava, studying entirely in Finnish. I worked as a frontend developer for 1 year and got solid skills on web development using HTML, CSS, JavaScript, React and TypeScript. In my work, I aim for high-quality, reliable, and scalable solutions, and I deeply believe in the power of teamwork.
             </p>
             <p className="my-5 max-w-[800px] basic-text">
               I continued my education with <strong className="highlight-text">a bachelor&apos;s degree in Software Engineering</strong> at Metropolia AMK in Helsinki. I have learned Java, JavaScript, Kotlin and Python, databases, React, Node.js, Spring Boot and other essential software development subjects. I am currently in the final year of my studies and am looking for a job opportunity where I can apply my skills and knowledge.
