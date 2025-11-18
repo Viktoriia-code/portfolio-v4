@@ -12,7 +12,7 @@ const Header: React.FC<{ activeSection: string }> = ({ activeSection }) => {
     <motion.header
     initial='hidden'
     animate='visible'
-    className='lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[35%] lg:flex-col lg:justify-between lg:py-24 z-[50]'
+    className='lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[48%] lg:flex-col lg:justify-between lg:py-24 z-[50]'
     >
       <div>
         <motion.div
@@ -33,7 +33,7 @@ const Header: React.FC<{ activeSection: string }> = ({ activeSection }) => {
         </motion.div>
         <motion.p
           variants={slideInFromLeft(0.8)}
-          className="basic-text mt-5 mb-8 max-w-[600px]"
+          className="basic-text mt-5 mb-8 max-w-[380px]"
         >
           I&apos;m a software development student at Metropolia AMK. I have a
           vocational degree in software development, a bachelor degree in management and 4 years of

@@ -7,6 +7,7 @@
 :root {
   --main-color: #68caff;
   --main-bg: rgba(0, 0, 0, 0.35);
+  --accent-color: #55D7CA;
 
   --easing: cubic-bezier(0.645, 0.045, 0.355, 1);
   --transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
@@ -175,4 +176,14 @@ html {
   box-shadow: 0 0 10px var(--main-color);
   border-radius: 24px;
   background-color: var(--main-bg);
+}
+
+.highlight-text {
+  color: #ffffff;
+  font-weight: 400;
+}
+
+.accent-text {
+  color: var(--main-color);
+  font-weight: 600;
 }

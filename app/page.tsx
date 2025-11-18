@@ -22,7 +22,7 @@ export default function Home() {
   } = useSectionObserver(setActiveSection);
   
   return (
-    <div className='mx-auto min-h-screen max-w-screen-xl px-5 py-10 md:px-12 md:py-16 lg:px-24 lg:py-0 lg:flex lg:justify-between lg:gap-20'>
+    <div className='mx-auto min-h-screen max-w-screen-xl px-5 py-10 md:px-8 md:py-16 lg:px-12 lg:py-0 lg:flex lg:justify-between lg:gap-4'>
       <Header activeSection={activeSection} />
       <motion.main 
         initial='hidden'
