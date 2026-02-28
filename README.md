@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🌐 Portfolio website
 
-## Getting Started
+A personal portfolio website built with **Next.js**, **TypeScript**, and **Tailwind CSS**, deployed on Vercel.
 
-First, run the development server:
+🔗 **Live site:** [portfolio-v4-rouge.vercel.app](https://portfolio-v4-rouge.vercel.app/)
+
+---
+
+## ✨ Features
+
+- **About** — Introduction and background as a software developer
+- **Experience** — Work history with roles, companies, and tech stacks
+- **Education** — Academic background from vocational to bachelor's degree level
+- **Projects** — Showcase of personal and school projects with descriptions and tech tags
+- **Skills** — Visual display of frontend and backend technologies
+- Fully **responsive** design
+- Smooth navigation with **Framer Motion** animations
+
+---
+
+## 🛠️ Tech Stack
+
+| Category | Technologies |
+|---|---|
+| Framework | Next.js (App Router) |
+| Language | TypeScript |
+| Styling | Tailwind CSS |
+| Animation | Framer Motion |
+| Deployment | Vercel |
+
+---
+
+## 📁 Project Structure
+
+```
+portfolio-v4/
+├── app/             # Next.js App Router pages
+├── components/      # Reusable UI components
+├── constants/       # Static data (experience, education, projects, skills)
+├── hooks/           # Custom React hooks
+├── public/          # Static assets (images, icons)
+├── types/           # TypeScript type definitions
+└── utils/           # Utility functions
+```
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18+
+- npm / yarn / pnpm / bun
+
+### Installation
+
+```bash
+git clone https://github.com/Viktoriia-code/portfolio-v4.git
+cd portfolio-v4
+npm install
+```
+
+### Development
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🌍 Deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This project is deployed using [Vercel](https://vercel.com/). Any push to the `main` branch triggers an automatic deployment.
