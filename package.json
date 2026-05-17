@@ -20,7 +20,7 @@
     "react-dom": "^18"
   },
   "devDependencies": {
-    "@react-three/drei": "^9.103.0",
+    "@react-three/drei": "^9.122.0",
     "@react-three/fiber": "^8.16.1",
     "@types/node": "^20",
     "@types/react": "^18.3.2",
