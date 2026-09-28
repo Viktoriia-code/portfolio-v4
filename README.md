@@ -56,7 +56,7 @@ portfolio-v4/
 
 ```bash
 git clone https://github.com/Viktoriia-code/portfolio-v4.git
-cd portfolio-v4
+cd ./portfolio-v4
 npm install
 ```
 
