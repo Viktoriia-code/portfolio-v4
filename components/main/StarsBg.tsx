@@ -2,13 +2,13 @@
 
 import React, { useState, useRef, Suspense, useEffect } from "react";
 import { Points, PointMaterial } from "@react-three/drei";
-import { Canvas, type PointsProps, useFrame } from "@react-three/fiber";
+import { Canvas, useFrame } from "@react-three/fiber";
 import * as random from "maath/random";
 import type { Points as PointsType } from "three";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCirclePause, faCirclePlay } from '@fortawesome/free-solid-svg-icons'
 
-export const StarBackground = (props: PointsProps) => {
+export const StarBackground = (props: React.ComponentProps<typeof Points>) => {
   const ref = useRef<PointsType | null>(null);
   const [sphere] = useState(() =>
     random.inSphere(new Float32Array(6000), { radius: 1.2 })
