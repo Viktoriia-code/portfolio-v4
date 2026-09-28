@@ -4,5 +4,11 @@ updates:
   - package-ecosystem: "npm"
     directory: "/"
     open-pull-requests-limit: 0
-    schedule:
-      interval: "weekly"
+    labels:
+      - "dependabot"
+      - "dependencies"
+      - "maintenance"
+    commit-message:
+      prefix: "chore"
+      prefix-development: "chore"
+      include: "scope"
