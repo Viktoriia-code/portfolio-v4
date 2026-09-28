@@ -14,7 +14,7 @@ A personal portfolio website built with **Next.js**, **TypeScript**, and **Tailw
 - **Projects** — Showcase of personal and school projects with descriptions and tech tags
 - **Skills** — Visual display of frontend and backend technologies
 - Fully **responsive** design
-- Smooth navigation with **Framer Motion** animations
+- Smooth navigation with **Motion** animations
 
 ---
 
