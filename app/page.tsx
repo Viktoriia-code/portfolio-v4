@@ -8,7 +8,7 @@ import Projects from "@/components/main/Projects";
 import Footer from "@/components/main/Footer";
 import useSectionObserver from '../hooks/useSectionObserver';
 import { useState } from "react";
-import { motion } from 'framer-motion'
+import { motion } from 'motion/react';
 import { slideInFromRight } from "@/utils/motion";
 
 export default function Home() {

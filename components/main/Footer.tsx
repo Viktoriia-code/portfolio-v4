@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useEffect } from 'react'
-import { useAnimation, motion } from 'framer-motion'
+import { useAnimation, motion } from 'motion/react'
 import { useInView } from "react-intersection-observer"
 import { slideInFromBottom, slideInFromLeft, slideInFromRight, slideInFromTop } from '@/utils/motion'
 
