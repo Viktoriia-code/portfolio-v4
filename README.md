@@ -14,7 +14,7 @@ A personal portfolio website built with **Next.js**, **TypeScript**, and **Tailw
 - **Projects** — Showcase of personal and school projects with descriptions and tech tags
 - **Skills** — Visual display of frontend and backend technologies
 - Fully **responsive** design
-- Smooth navigation with **Framer Motion** animations
+- Smooth navigation with **Motion** animations
 
 ---
 
@@ -49,14 +49,14 @@ portfolio-v4/
 
 ### Prerequisites
 
-- Node.js 18+
-- npm / yarn / pnpm / bun
+- Node.js 24+
+- npm
 
 ### Installation
 
 ```bash
 git clone https://github.com/Viktoriia-code/portfolio-v4.git
-cd portfolio-v4
+cd ./portfolio-v4
 npm install
 ```
 

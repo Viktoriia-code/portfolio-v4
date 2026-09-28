@@ -3,7 +3,7 @@
 import React from 'react';
 import { slideInFromLeft, slideInFromRight, slideInFromTop } from '@/utils/motion';
 import { SparklesIcon } from '@heroicons/react/24/solid';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 
 const SkillText = () => {
 
