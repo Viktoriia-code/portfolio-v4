@@ -49,8 +49,8 @@ portfolio-v4/
 
 ### Prerequisites
 
-- Node.js 18+
-- npm / yarn / pnpm / bun
+- Node.js 24+
+- npm
 
 ### Installation
 
