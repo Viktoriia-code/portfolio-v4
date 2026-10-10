@@ -139,8 +139,26 @@ export const Backend_skill = [
 
 
 export const Experince_data = [
+    {
+    date: "5/2026 - 9/2026",
+    date_title: "MAY — SEP 2026",
+    name: "Software Engineer Intern",
+    place_name: "Zalando",
+    location: "Helsinki, Finland",
+    image_src: "/zalando_logo.png",
+    link: "https://www.zalando.com/",
+    width: 129.2,
+    height: 29.37,
+    job_tasks: [
+      "Develop and improve user interfaces for Editor Studio CMS using React, TypeScript, Redux and Pax design system, working within a micro frontend architecture integrated with ZDirect",
+      "Collaborate with backend engineers to define API requirements, coordinating implementation required to support user-facing features",
+      "Led dependency update automation for active and legacy applications, addressing security vulnerabilities, maintaining compatibility, and improving dependency maintenance workflows",
+      "Maintain unit and e2e test coverage and Storybook documentation to support application reliability and maintainability"
+    ],
+    tech_stack: ["React", "TypeScript", "GraphQL", "Redux.js", "Automated Testing", "Storybook", "CI/CD", "GitHub"],
+  },
   {
-    date: "4/2024 - present",
+    date: "4/2024 - 8/2024",
     date_title: "APR — AUG 2024",
     name: "Frontend engineer",
     place_name: "Mindioo",
